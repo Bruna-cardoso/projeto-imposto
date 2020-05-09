@@ -86,6 +86,15 @@ public class imposto {
 		System.out.printf("Máximo dedutível: %.2f%n", maxdedutivel);
 		System.out.printf("Gastos dedutíveis: %.2f%n", gastostotal);
 		
+		// Relatorio finalizado
+		
+		impostototal = impostobruto - dedutivel;
+		
+		System.out.println();
+		System.out.printf("Imposto bruto total: %.2f%n", impostobruto);
+		System.out.printf("Abatimento: %.2f%n", dedutivel);
+		System.out.printf("Imposto devido: %.2f%n", impostototal);
+		
 		sc.close();
 
 	}
