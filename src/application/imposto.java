@@ -28,6 +28,46 @@ public class imposto {
 		System.out.println("Gastos educacionais:");
 		gastose = sc.nextDouble();
 		
+		// Consolidado de renda
+		
+					// Imposto salário 
+				
+					salariomensal = salario / 12;
+					
+					if (salariomensal >= 3000.00 && salariomensal < 5000.00 ) {
+						impostosalario = salario * 0.10;
+					}
+					else if (salariomensal >= 5000.00) {
+						impostosalario = salario * 0.20;
+					}
+					else {
+						impostosalario = 0.00;
+					}
+					
+					// Imposto prestação de serviços
+					if (servicos != 0.00) {
+						impostoservicos = servicos * 0.15;
+					}
+					else {
+						impostoservicos = 0.00;
+					}
+					
+					// Imposto ganho de capital
+					if (capital != 0.00) {
+						impostocapital = capital * 0.20;
+					}
+					else {
+						impostocapital = 0.00;
+					}
+					
+		System.out.println();	
+		System.out.println("RELATÓRIO DE IMPOSTO DE RENDA");
+		System.out.println();
+		System.out.println("CONSOLIDADO DE RENDA:");
+		System.out.printf("Imposto sobre salário: %.2f%n", impostosalario);
+		System.out.printf("Imposto sobre serviços: %.2f%n", impostoservicos);
+		System.out.printf("Imposto sobre ganho de capital: %.2f%n", impostocapital);
+		
 		sc.close();
 
 	}
